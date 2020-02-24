@@ -7,7 +7,7 @@
  import java.util.concurrent.TimeUnit;
 
  /**
-  * @Description
+  * @Description todo 线程的中断
   * @Author YangLee
   * @Date2020/2/25 2:29 上午
   * @Version

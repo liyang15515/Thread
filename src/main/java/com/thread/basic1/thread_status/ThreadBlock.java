@@ -7,7 +7,7 @@
  import java.util.concurrent.TimeUnit;
 
  /**
-  * @Description
+  * @Description todo 线程对的遇锁sychronized变成blocked状态
   * @Author YangLee
   * @Date2020/2/25 1:40 上午
   * @Version
