@@ -11,7 +11,28 @@
   * @Version
   **/
  public class Application {
-  public static void main(String[] args) {
+     PrintProcessor printProcessor;
+     SaveProcessor saveProcessor;
+     PreProcessor preProcessor;
+     static RequestProcessor requestProcessor;
 
-  }
+     public Application() {
+
+     }
+     public void startUp(){
+         printProcessor = new PrintProcessor();
+         saveProcessor = new SaveProcessor(printProcessor);
+         printProcessor.start();
+         saveProcessor.start();
+         requestProcessor = new PreProcessor(saveProcessor);
+         ((PreProcessor) requestProcessor).start();
+     }
+
+     public static void main(String[] args) {
+         Application application = new Application();
+         application.startUp();
+         Request request = new Request();
+         request.setName("yanglee");
+         requestProcessor.process(request);
+     }
  }
