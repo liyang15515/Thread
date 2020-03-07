@@ -11,11 +11,12 @@
   * @Version
   **/
  public class ThreadLifecycleApplication {
-  public static void main(String[] args) {
-   try {
-    Thread.sleep(100);
-   } catch (InterruptedException e) {
-    e.printStackTrace();
-   }
-  }
+     public static void main(String[] args) {
+         try {
+             Thread.sleep(100);//sleep必须设置时间片
+//          Thread.
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+     }
  }
